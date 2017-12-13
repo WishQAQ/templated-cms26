@@ -1,0 +1,27 @@
+<section class="sidebar float-left">
+  <section class="page-menu" skinobjectzone="menu_3029">
+    <div class="page-menu-title">
+      <h3>{dede:field.typeid runphp='yes'}$ID = @me; $sql = "SELECT * FROM `dede_arctype` WHERE id=$ID";$query = mysql_query($sql);$row=mysql_fetch_array($query); $relID = "$row[reid]"; if($relID == 0) {@me = $row[typename];}else{$sql = "SELECT `typename` FROM `dede_arctype` WHERE id=$relID";$query = mysql_query($sql);$row=mysql_fetch_array($query); @me = $row[typename];}{/dede:field.typeid}</h3>
+    </div>
+    <div class="page-menu-content">
+      <ul>
+        {dede:channel type='son' currentstyle="<li class='current'><a href='~typelink~'>~typename~</a><i></i></li>"}
+        <li><a href="[field:typeurl/]" target="">[field:typename/]</a><i></i></li>
+        {/dede:channel}
+      </ul>
+      <script type="text/javascript">
+        $(document).ready(function(){
+        $('.page-menu-content ul').find('li:last').addClass('last');
+        $('.page-menu-content > ul > li > a').click(function(){
+         if( $(this).parent('li').find('ul') ){
+          $(this).parent('li').find('ul').slideDown('fast');
+          $(this).parent('li').siblings('li').find('ul').slideUp('fast');
+          $(this).parent('li').addClass('current').siblings('li').removeClass('current');
+         }
+        }); 
+       });
+</script></div>
+  </section>
+  <div class="clear"></div>
+  <div id="a1portalSkin_sidebarAreaA" class="QHDEmptyArea sidebar-content"></div>
+</section>

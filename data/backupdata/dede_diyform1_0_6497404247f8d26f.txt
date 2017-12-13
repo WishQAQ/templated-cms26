@@ -1,0 +1,1 @@
+INSERT INTO `dede_diyform1` VALUES('6','0','AB模板网','13588889999','留言测试');

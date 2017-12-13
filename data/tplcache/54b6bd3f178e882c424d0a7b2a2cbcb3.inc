@@ -1,0 +1,2 @@
+<p style="text-align: center;"> <a href="[field:typelink /]" target="_blank"><img alt="" src="/style/images/s1.png" style="width: 132px; height: 131px;" /></a></p>
+                      <p style="text-align: center;"> <a href="[field:typelink /]" target="_blank">[field:typename /]</a></p>
